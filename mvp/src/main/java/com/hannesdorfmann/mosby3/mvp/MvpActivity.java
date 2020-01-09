@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import com.hannesdorfmann.mosby3.mvp.delegate.ActivityMvpDelegate;
 import com.hannesdorfmann.mosby3.mvp.delegate.ActivityMvpDelegateImpl;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 /**
  * An Activity that uses a {@link MvpPresenter} to implement a Model-View-Presenter
@@ -30,7 +31,7 @@ import com.hannesdorfmann.mosby3.mvp.delegate.ActivityMvpDelegateImpl;
  * @since 1.0.0
  */
 public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>
-    extends AppCompatActivity implements MvpView,
+    extends RxAppCompatActivity implements MvpView,
     com.hannesdorfmann.mosby3.mvp.delegate.MvpDelegateCallback<V,P> {
 
   protected ActivityMvpDelegate mvpDelegate;
