@@ -27,6 +27,7 @@ import android.view.View;
 import com.hannesdorfmann.mosby3.mvp.delegate.FragmentMvpDelegate;
 import com.hannesdorfmann.mosby3.mvp.delegate.FragmentMvpDelegateImpl;
 import com.hannesdorfmann.mosby3.mvp.delegate.MvpDelegateCallback;
+import com.trello.rxlifecycle2.components.support.RxFragment;
 
 /**
  * A Fragment that uses a {@link MvpPresenter} to implement a Model-View-Presenter architecture.
@@ -34,7 +35,7 @@ import com.hannesdorfmann.mosby3.mvp.delegate.MvpDelegateCallback;
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
-public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>> extends Fragment
+public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>> extends RxFragment
     implements MvpDelegateCallback<V, P>, MvpView {
 
   protected FragmentMvpDelegate<V, P> mvpDelegate;
