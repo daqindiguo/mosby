@@ -39,27 +39,27 @@ android {
 
 dependencies {
 
-  implementation 'com.android.support:appcompat-v7:' + rootProject.ext.supportLibVersion
+  compile 'com.android.support:appcompat-v7:' + rootProject.ext.supportLibVersion
 
-  implementation project(':mvp-common')
-  implementation project(':presentermanager')
-  implementation project(':utils-fragment')
+  compile project(':mvp-common')
+  compile project(':presentermanager')
+  compile project(':utils-fragment')
 
-  androidTestImplementation 'junit:junit:' + rootProject.ext.junitVersion
-  androidTestImplementation 'org.mockito:mockito-core:' + rootProject.ext.mockitoVersion
+  testCompile 'junit:junit:' + rootProject.ext.junitVersion
+  testCompile 'org.mockito:mockito-core:' + rootProject.ext.mockitoVersion
 
-  testImplementation "org.robolectric:robolectric:"+rootProject.ext.robolectricVersion
-  testImplementation "org.robolectric:shadows-support-v4:"+rootProject.ext.robolectricVersion
+  testCompile "org.robolectric:robolectric:"+rootProject.ext.robolectricVersion
+  testCompile "org.robolectric:shadows-support-v4:"+rootProject.ext.robolectricVersion
 
-  implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.2'
-  implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.2'
-  implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
+  compile 'com.trello.rxlifecycle2:rxlifecycle:2.2.2'
+  compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.2'
+  compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
 
-  testImplementation('org.powermock:powermock-api-mockito:' + rootProject.ext.powermockVersion) {
+  testCompile('org.powermock:powermock-api-mockito:' + rootProject.ext.powermockVersion) {
     exclude module: 'hamcrest-core'
     exclude module: 'objenesis'
   }
-  testImplementation('org.powermock:powermock-module-junit4:' + rootProject.ext.powermockVersion) {
+  testCompile('org.powermock:powermock-module-junit4:' + rootProject.ext.powermockVersion) {
     exclude module: 'hamcrest-core'
     exclude module: 'objenesis'
   }
